@@ -25,19 +25,19 @@ function calcularIMC(peso, altura) {
 
     let status, perdaPeso;
     if (imc < 18.5) {
-        status = "Abaixo do peso";
+        status = "abaixo do peso";
     } else if (imc < 25) {
-        status = "Peso normal";
+        status = "peso normal";
     } else if (imc < 30) {
-        status = "Sobrepeso";
+        status = "sobrepeso";
     } else if (imc < 35) {
-        status = "Obesidade grau I";
+        status = "obesidade grau I";
         perdaPeso = peso * 0.20;
     } else if (imc < 40) {
-        status = "Obesidade grau II";
+        status = "obesidade grau II";
         perdaPeso = peso * 0.30;
     } else {
-        status = "Obesidade grau III";
+        status = "obesidade grau III";
         perdaPeso = peso * 0.40;
     }
 
@@ -45,7 +45,7 @@ function calcularIMC(peso, altura) {
     if (imc >= 35) {
         mensagem = `Você está com ${status}. Para voltar ao peso ideal, você precisa perder ${perdaPeso.toFixed(2)} quilos.`;
     } else {
-        mensagem = `Seu IMC é ${imc.toFixed(2)}. Você está ${status}.`;
+        mensagem = `Seu IMC é ${imc.toFixed(2)}. Você está com ${status}.`;
     }
 
     return mensagem;
